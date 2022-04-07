@@ -42,6 +42,7 @@ class ProductPrice
 
 		double min = Math.min(Math.min(prices[0], prices[1]), prices[2]);
 		int index= Arrays.asList(prices).indexOf(min);
+                System.out.print("LOWEST PRICE PRODUCT:\n");
 		prd[index].show();
 	}
 }

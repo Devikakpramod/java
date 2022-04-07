@@ -1,29 +1,60 @@
-public class ComplexNumber{
-   
-   double real, img;
-	
-  
-   ComplexNumber(double r, double i)
-   {
-	this.real = r;
-	this.img = i;
-   }
-	
-   public static ComplexNumber sum(ComplexNumber c1, ComplexNumber c2)
-   {
-	
-        ComplexNumber temp = new ComplexNumber(0, 0);
 
-        temp.real = c1.real + c2.real;
-        temp.img = c1.img + c2.img;
-        
-       
-        return temp;
-    }
-    public static void main(String args[]) {
-	ComplexNumber c1 = new ComplexNumber(5.5, 4);
-	ComplexNumber c2 = new ComplexNumber(1.2, 3.5);
-        ComplexNumber temp = sum(c1, c2);
-        System.out.printf("Sum is: "+ temp.real+" + "+ temp.img +"i");
-    }
+
+class ComplexNumber {
+
+	
+	
+	int real, image;
+
+	
+	public ComplexNumber(int r, int i)
+	{
+		this.real = r;
+		this.image = i;
+	}
+
+	
+	public void showC()
+	{
+		System.out.print(this.real + " +i" + this.image);
+	}
+
+	
+	public static ComplexNumber add(ComplexNumber n1,
+									ComplexNumber n2)
+	{
+
+		ComplexNumber res = new ComplexNumber(0, 0);
+
+		
+		res.real = n1.real + n2.real;
+
+		
+		res.image = n1.image + n2.image;
+
+		
+		return res;
+	}
+
+	public static void main(String arg[])
+	{
+
+		
+		ComplexNumber c1 = new ComplexNumber(4, 5);
+		ComplexNumber c2 = new ComplexNumber(10, 5);
+
+		
+		System.out.print("first Complex number: ");
+		c1.showC();
+		
+		System.out.print("\nSecond Complex number: ");
+		c2.showC();
+
+		
+		ComplexNumber res = add(c1, c2);
+
+		
+		System.out.println("\nAddition is :");
+		res.showC();
+	}
 }
